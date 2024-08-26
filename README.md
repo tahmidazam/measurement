@@ -2,6 +2,34 @@ An extensible TypeScript library for labelling numeric quantities with physical 
 
 This library is a port of the [Units and Measurement API Collection](https://developer.apple.com/documentation/foundation/units_and_measurement), a component of the Swift [Foundation](https://developer.apple.com/documentation/foundation) library. Classes, methods, and functionality closely follow the Swift Foundation library source code repository, [`swift-corelibs-foundation`](https://github.com/apple/swift-corelibs-foundation).
 
+## Documentation
+
+### Formatting measurements
+
+Call the `formatted()` method on a measurement instance to return a formatted string.
+
+```typescript
+const measurement = new Measurement(1, UnitPressure.kilopascals)
+
+console.log(measurement.formatted()) // 1 kPa
+```
+
+You can provide the locales, number format options, and the separator to the `formatted()` method:
+
+```typescript
+const measurement = new Measurement(1, UnitPressure.kilopascals)
+
+const formatOptions: Measurement.FormatOptions = {
+  numberFormatOptions: {
+    minimumFractionDigits: 3,
+  }
+  separator: ''
+  locales: 'en-GB'
+}
+
+console.log(measurement.formatted(formatOptions)) // 1.000kPa
+```
+
 ## Contributing
 
 ## Building
