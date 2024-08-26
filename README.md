@@ -4,13 +4,17 @@ This library is a port of the [Units and Measurement API Collection](https://dev
 
 ## Contributing
 
-### Commits
+## Building
 
-Commit messages follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard.
+Build the package using `pnpm build`.
 
 ### Unit tests
 
-Unit tests are written using [`jest`](https://jestjs.io) and follow the [JavaScript Unit Testing Guide](https://github.com/mawrkus/js-unit-testing-guide).
+Unit tests are written using [`jest`](https://jestjs.io) and follow the [JavaScript Unit Testing Guide](https://github.com/mawrkus/js-unit-testing-guide). Run all test suites using `pnpm test`.
+
+### Commits
+
+Commit messages follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard.
 
 ## Roadmap
 
