@@ -27,4 +27,24 @@ export class Measurement<
     this.value = converted.value;
     this.unit = converted.unit;
   }
+
+  formatted(formatOptions?: {
+    numberFormatOptions?: Intl.NumberFormatOptions;
+    separator?: string;
+    locales?: Intl.LocalesArgument;
+  }): string {
+    const { numberFormatOptions, separator, locales } = formatOptions ?? {};
+
+    // Set style and strip options relating to units.
+    const numberFormat = new Intl.NumberFormat(locales, {
+      ...(numberFormatOptions ?? {}),
+      style: "decimal",
+      unit: undefined,
+      unitDisplay: undefined,
+    });
+
+    return [numberFormat.format(this.value), this.unit.symbol].join(
+      separator ?? " "
+    );
+  }
 }

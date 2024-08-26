@@ -55,4 +55,44 @@ describe("Measurement", () => {
       expect(measurement.unit).toEqual(UnitPressure.kilopascals);
     });
   });
+
+  describe("formatted()", () => {
+    it("returns a formatted string with default format and separator", () => {
+      // Arrange
+      const measurement = new Measurement(5, UnitPressure.megapascals);
+
+      // Act
+      const result = measurement.formatted();
+
+      // Assert
+      expect(result).toBe("5 MPa");
+    });
+
+    it("returns a formatted string with custom format and default separator", () => {
+      // Arrange
+      const measurement = new Measurement(5, UnitPressure.megapascals);
+
+      // Act
+      const result = measurement.formatted();
+
+      // Assert
+      expect(result).toBe(`5 ${UnitPressure.megapascals.symbol}`);
+    });
+
+    it("returns a formatted string with custom format and custom separator", () => {
+      // Arrange
+      const measurement = new Measurement(5, UnitPressure.megapascals);
+
+      // Act
+      const result = measurement.formatted({
+        numberFormatOptions: {
+          minimumFractionDigits: 3,
+        },
+        separator: "",
+      });
+
+      // Assert
+      expect(result).toBe(`5.000${UnitPressure.megapascals.symbol}`);
+    });
+  });
 });
