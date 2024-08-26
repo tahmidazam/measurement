@@ -2,7 +2,7 @@ import { Dimension } from "../dimension/dimension";
 import { UnitConverterLinear } from "../unit-converter-linear/unit-converter-linear";
 
 export class UnitPressure extends Dimension {
-  static UNIT_PRESSURE_SYMBOL = {
+  static SYMBOL = {
     newtonsPerMetersSquared: "N/m²",
     gigapascals: "GPa",
     megapascals: "MPa",
@@ -15,7 +15,7 @@ export class UnitPressure extends Dimension {
     poundsForcePerSquareInch: "psi",
   } as const;
 
-  static UNIT_PRESSURE_COEFFICIENT = {
+  static COEFFICIENT = {
     newtonsPerMetersSquared: 1.0,
     gigapascals: 1e9,
     megapascals: 1e6,
@@ -36,8 +36,8 @@ export class UnitPressure extends Dimension {
     new (class extends UnitPressure {
       constructor() {
         super(
-          UnitPressure.UNIT_PRESSURE_SYMBOL.newtonsPerMetersSquared,
-          UnitPressure.UNIT_PRESSURE_COEFFICIENT.newtonsPerMetersSquared
+          UnitPressure.SYMBOL.newtonsPerMetersSquared,
+          UnitPressure.COEFFICIENT.newtonsPerMetersSquared
         );
       }
     })();
@@ -45,8 +45,8 @@ export class UnitPressure extends Dimension {
   static gigapascals: UnitPressure = new (class extends UnitPressure {
     constructor() {
       super(
-        UnitPressure.UNIT_PRESSURE_SYMBOL.gigapascals,
-        UnitPressure.UNIT_PRESSURE_COEFFICIENT.gigapascals
+        UnitPressure.SYMBOL.gigapascals,
+        UnitPressure.COEFFICIENT.gigapascals
       );
     }
   })();
@@ -54,8 +54,8 @@ export class UnitPressure extends Dimension {
   static megapascals: UnitPressure = new (class extends UnitPressure {
     constructor() {
       super(
-        UnitPressure.UNIT_PRESSURE_SYMBOL.megapascals,
-        UnitPressure.UNIT_PRESSURE_COEFFICIENT.megapascals
+        UnitPressure.SYMBOL.megapascals,
+        UnitPressure.COEFFICIENT.megapascals
       );
     }
   })();
@@ -63,8 +63,8 @@ export class UnitPressure extends Dimension {
   static kilopascals: UnitPressure = new (class extends UnitPressure {
     constructor() {
       super(
-        UnitPressure.UNIT_PRESSURE_SYMBOL.kilopascals,
-        UnitPressure.UNIT_PRESSURE_COEFFICIENT.kilopascals
+        UnitPressure.SYMBOL.kilopascals,
+        UnitPressure.COEFFICIENT.kilopascals
       );
     }
   })();
@@ -72,8 +72,8 @@ export class UnitPressure extends Dimension {
   static hectopascals: UnitPressure = new (class extends UnitPressure {
     constructor() {
       super(
-        UnitPressure.UNIT_PRESSURE_SYMBOL.hectopascals,
-        UnitPressure.UNIT_PRESSURE_COEFFICIENT.hectopascals
+        UnitPressure.SYMBOL.hectopascals,
+        UnitPressure.COEFFICIENT.hectopascals
       );
     }
   })();
@@ -81,35 +81,29 @@ export class UnitPressure extends Dimension {
   static inchesOfMercury: UnitPressure = new (class extends UnitPressure {
     constructor() {
       super(
-        UnitPressure.UNIT_PRESSURE_SYMBOL.inchesOfMercury,
-        UnitPressure.UNIT_PRESSURE_COEFFICIENT.inchesOfMercury
+        UnitPressure.SYMBOL.inchesOfMercury,
+        UnitPressure.COEFFICIENT.inchesOfMercury
       );
     }
   })();
 
   static bars: UnitPressure = new (class extends UnitPressure {
     constructor() {
-      super(
-        UnitPressure.UNIT_PRESSURE_SYMBOL.bars,
-        UnitPressure.UNIT_PRESSURE_COEFFICIENT.bars
-      );
+      super(UnitPressure.SYMBOL.bars, UnitPressure.COEFFICIENT.bars);
     }
   })();
 
   static millibars: UnitPressure = new (class extends UnitPressure {
     constructor() {
-      super(
-        UnitPressure.UNIT_PRESSURE_SYMBOL.millibars,
-        UnitPressure.UNIT_PRESSURE_COEFFICIENT.millibars
-      );
+      super(UnitPressure.SYMBOL.millibars, UnitPressure.COEFFICIENT.millibars);
     }
   })();
 
   static millimetersOfMercury: UnitPressure = new (class extends UnitPressure {
     constructor() {
       super(
-        UnitPressure.UNIT_PRESSURE_SYMBOL.millimetersOfMercury,
-        UnitPressure.UNIT_PRESSURE_COEFFICIENT.millimetersOfMercury
+        UnitPressure.SYMBOL.millimetersOfMercury,
+        UnitPressure.COEFFICIENT.millimetersOfMercury
       );
     }
   })();
@@ -118,8 +112,8 @@ export class UnitPressure extends Dimension {
     new (class extends UnitPressure {
       constructor() {
         super(
-          UnitPressure.UNIT_PRESSURE_SYMBOL.poundsForcePerSquareInch,
-          UnitPressure.UNIT_PRESSURE_COEFFICIENT.poundsForcePerSquareInch
+          UnitPressure.SYMBOL.poundsForcePerSquareInch,
+          UnitPressure.COEFFICIENT.poundsForcePerSquareInch
         );
       }
     })();
