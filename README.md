@@ -64,7 +64,7 @@ Commit messages follow the [Conventional Commits](https://www.conventionalcommit
 
 ### Concentration and Dispersion
 
-- [ ] `UnitConcentrationMass` subclass
+- [x] `UnitConcentrationMass` subclass
 - [ ] `UnitDispersion` subclass
 
 ### Fuel Efficiency
