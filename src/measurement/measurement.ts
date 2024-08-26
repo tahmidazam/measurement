@@ -28,11 +28,7 @@ export class Measurement<
     this.unit = converted.unit;
   }
 
-  formatted(formatOptions?: {
-    numberFormatOptions?: Intl.NumberFormatOptions;
-    separator?: string;
-    locales?: Intl.LocalesArgument;
-  }): string {
+  formatted(formatOptions?: Measurement.FormatOptions): string {
     const { numberFormatOptions, separator, locales } = formatOptions ?? {};
 
     // Set style and strip options relating to units.
@@ -46,5 +42,13 @@ export class Measurement<
     return [numberFormat.format(this.value), this.unit.symbol].join(
       separator ?? " "
     );
+  }
+}
+
+namespace Measurement {
+  export interface FormatOptions {
+    numberFormatOptions?: Intl.NumberFormatOptions;
+    separator?: string;
+    locales?: Intl.LocalesArgument;
   }
 }
